@@ -16,11 +16,11 @@ resource "aws_launch_template" "ecs" {
       name = aws_iam_instance_profile.ecs_profile.name
     }
     user_data = base64encode(<<EOF
-#!/bin/bash
-echo ECS_CLUSTER=${aws_ecs_cluster.this.name} >> /etc/ecs/ecs.config
-EOF
-  )
-}
+      #!/bin/bash
+      echo ECS_CLUSTER=${aws_ecs_cluster.this.name} >> /etc/ecs/ecs.config
+      EOF
+        )
+      }
 
 data "aws_ami" "ecs" {
   most_recent = true
