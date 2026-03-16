@@ -2,7 +2,6 @@ import type { StrapiApp } from '@strapi/strapi/admin';
 
 export default {
   config: {
-    // 1. Add the translations object here
     translations: {
       en: {
         "app.components.HomePage.welcome.title": "Hey Shivam, Welcome Back!",
