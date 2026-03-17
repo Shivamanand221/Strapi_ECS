@@ -42,7 +42,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-def.json
-        container-name: your-container-name
+        container-name: ${{ secrets.CONTAINER_NAME }}
         image: ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPOSITORY }}:latest
 
     - name: Deploy to ECS
